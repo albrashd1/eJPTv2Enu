@@ -57,7 +57,7 @@ nmblookup -A $IP
 
 echo -e "\n"
 echo -e "${RED}[-] ${GREEN}SMB enumeration for UDP ports: \033[0m"
-nmap $IP -sU -p138,139 --open -sV | tail -n +10 | head -n -2
+nmap $IP -sU --top-port 25 --open -sV | tail -n +10 | head -n -2
 }
 
 #function for ftp enumerations command
